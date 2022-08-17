@@ -26,10 +26,12 @@ For testing the design, the test code is written in such a way so that we can ve
  
  
  AUTHOUR
- PRIYANSHU,M.Tech student at IIIT Bangalore.
+
+PRIYANSHU,M.Tech student at IIIT Bangalore.
  
 
  ACKNOWLEDGEMENTS
+ 
  Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
  
  CONTACT INFORMATION
