@@ -22,3 +22,18 @@ WORKING THEORY
 In Parallel-In Parallel-Out (PIPO) shift register input loads in parallel manner and also out in parallel manner. In this paper we are implementing the 4-bit PIPO shift register using Verilog HDL and it is simulated by the “iverilog” simulator tool and the result is stored in the .vcd (value change dump) format and can be viewed in the tool called “gtkwave”.
 For testing the design, the test code is written in such a way so that we can verify the working of PIPO, for that we provided the input “pi” and “clk” and “clear” in a certain pattern. Using the “iverilog” tool, saved the result after applying the stimulus in to the .vcd format. later plotted the output with the help of “gtkwave” as shown in the Fig. 2, and it can be clearly seen that as we provide the “clk” for each positive edge the output “po” follow the “pi”. Also as the “clear” signal provided it with presence of the positive edge output “po“ get low.   
 
+
+ 
+ 
+ AUTHOUR
+ PRIYANSHU,M.Tech student at IIIT Bangalore.
+ 
+
+ ACKNOWLEDGEMENTS
+ Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+ 
+ CONTACT INFORMATION
+ PRIYANSHU-priyanshusingh0402.ps@gmail.com
+ Kunal Ghosh- kunalghosh@gmail.com
+ 
+ 
