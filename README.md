@@ -34,7 +34,7 @@ For testing the design, the test code is written in such a way so that we can ve
  
  CONTACT INFORMATION
  
- PRIYANSHU-priyanshusingh0402.ps@gmail.com
+ PRIYANSHU- priyanshusingh0402.ps@gmail.com
  
  Kunal Ghosh- kunalghosh@gmail.com
  
