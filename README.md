@@ -72,6 +72,35 @@ GLS is generating the simulation output by running test bench with netlist file 
 Below picture gives an insight of the procedure. Here while using iverilog, you also include gate level verilog models to generate GLS simulation.
 
 ![183838608-b56e1d75-929d-492a-b112-8203a5e40cff](https://user-images.githubusercontent.com/110079807/185231441-8ae2f7ca-5af4-4df3-8a31-8649b3e68970.png)
+To clone the repository and download the netlist files for simulation, enter the following command in your terminal
+
+$ git clone https://github.com/ArshKedia/iiitb_3bit_rc
+After cloning the git repository, type the following in "iiitb_3bit_rc" directory in the terminal for RTL Simulation.
+
+$ iverilog iiitb_3bit_rc.v iiitb_3bit_rc_tb.v
+$ ./a.out 
+$ gtkwave iiitb_3bit_rr_out.vcd
+For synthesis, run "yosys_run.sh" file in the same directory in terminal.
+
+$ yosys -s yosys_run.sh
+The above commands create the netlist of iverilog code.
+
+For Gate level syntheses(GLS), type the following in the same directory in terminal
+
+$ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 ../iiitb_3bit_rc/verilog_model/primitives.v ../iiitb_3bit_rc/verilog_model/sky130_fd_sc_hd.v iiitb_3bit_rc_net.v iiitb_3bit_rc_tb.v
+To generate the simulation, type the following in the same directory in terminal
+
+$ ./a.out
+$ gtkwave iiitb_3bit_rr.vcd
+NETLIST
+In electronic design, a netlist is a description of the connectivity of an electronic circuit.In its simplest form, a netlist consists of a list of the electronic components in a circuit and a list of the nodes they are connected to. A network (net) is a collection of two or more interconnected components.
+
+![netlist](https://user-images.githubusercontent.com/110079807/185232556-0a08a701-6f81-4ec4-a659-ecb38c7289d9.png)
+
+The above picture shows the netlist of this project after synthesis.
+Post synthesis simulation
+
+![post synthesis](https://user-images.githubusercontent.com/110079807/185232688-cc14aa7e-c6d9-453a-ba5e-ed6946daa4fd.png)
 
  
  AUTHOUR
