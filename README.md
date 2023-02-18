@@ -434,7 +434,8 @@ To extract Spice netlist, Type the following commands in tcl window.
 ```
 `cthresh 0 rthresh 0` is used to extract parasitic capacitances from the cell.<br>
 
-![2](https://user-images.githubusercontent.com/62461290/187435606-af09735d-64bf-4623-a4bf-e3bae9a2bd56.png)
+![Screenshot from 2023-02-19 00-01-09](https://user-images.githubusercontent.com/110079807/219882485-38930437-80dd-461c-a114-26a0061f26a3.png)
+
 
 The spice netlist has to be edited to add the libraries we are using, The final spice netlist should look like the following:
 
@@ -569,7 +570,7 @@ As mentioned by kunal sir dont use defined `DIE_AREA` and `FP_SIZING : absolute`
     "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
     "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
     "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
-    "TEST_EXTERNAL_GLOB": "dir::../iiitb_freqdiv/src/*"
+    "TEST_EXTERNAL_GLOB": "dir::../iiitb_pipo/src/*"
 
 
 }
@@ -829,31 +830,32 @@ OpenSTA> report_checks <br>
 If the below error occurs while doing `make mount` replace it with `sudo make mount`<br>
 <br>
 
-![error1](https://user-images.githubusercontent.com/62461290/187061092-d76638cb-4fec-4071-b5d2-94c81fd06720.png)
+![Screenshot from 2023-02-19 00-12-15](https://user-images.githubusercontent.com/110079807/219882877-07c3d431-81d8-43ce-9777-a80c49a46dec.png)
+
 
 ## Error 2
 
 If you face the below error play around with the values of `PL_TARGET_DENSITY`, `FP_CORE_UTIL` and `CLOCK_PERIOD` until it works for your design, these values are very custom for each and every design. <br>
 <br>
+![Screenshot from 2023-02-19 00-17-26](https://user-images.githubusercontent.com/110079807/219883094-2ae1efe0-d284-4883-8dec-20a18c49a793.png)
+![Screenshot from 2023-02-19 00-17-44](https://user-images.githubusercontent.com/110079807/219883099-fe7441de-90d4-47be-84a1-6a62131c1e3b.png)
 
-![image](https://user-images.githubusercontent.com/62461290/187419005-df228345-7811-411d-8f2b-dd16107def0a.png)
 
 ## Error 3
 
 Make sure the name of the module is same throughout, otherwise it will not infer the macro.<br>
 <br>
 
-![error3](https://user-images.githubusercontent.com/62461290/187060702-e99e2389-6518-4253-961f-4e639cbd1ecd.png)
-![error4](https://user-images.githubusercontent.com/62461290/187060706-871d59b7-c212-40fa-b492-382d8ea94c04.png)
-![error5](https://user-images.githubusercontent.com/62461290/187060692-91a34f20-d31f-4663-9dd2-ed9231811994.png)<br>
+
 
 ## Error 4
 
-If you are getting the below error please add `"TEST_EXTERNAL_GLOB": "dir::../iiitb_freqdiv/src/*"` to the config.json file.
+If you are getting the below error please add `"TEST_EXTERNAL_GLOB": "dir::../iiitb_pipo/src/*"` to the config.json file.
 <br>
+![Screenshot from 2023-02-19 00-26-54](https://user-images.githubusercontent.com/110079807/219883400-1a58d6bc-1a75-4c04-90ab-106ba0f34b47.png)![Screenshot from 2023-02-19 00-27-09](https://user-images.githubusercontent.com/110079807/219883401-556819b2-10f7-42c2-b057-577b6e6c29ba.png)
+
 <br>
 
-![error6](https://user-images.githubusercontent.com/62461290/187060745-62738ad9-241c-430d-bd5b-321c0d792b3d.png)<br>
 
 ## Error 5
 
@@ -868,21 +870,16 @@ If you are getting the below error, please check the file name and macro name of
 
 ![WhatsApp Image 2022-08-30 at 4 16 12 PM](https://user-images.githubusercontent.com/62461290/187418027-9c620ff6-c86f-4695-8e65-20ac84898742.jpeg)
 
-
 ## Error 7
 
 If you are getting the below error, please use merged.nom.lef file while opening def files using magic. <br>
 
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
-```
+$ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_pipo.def &
+`
 
 ![error7](https://user-images.githubusercontent.com/62461290/187417649-cbafa63e-a68b-4497-9f59-eee3e6963b2c.png)
 
-## Error 8
-If you get the below error, change the `PL_TARGET_DENSITY` to the mentioned value.<br>
-<br>
-![error](https://user-images.githubusercontent.com/62461290/187060613-a21b3443-92fd-4e1e-8ab5-d17d5b7466d4.png)<br>
 
 
 # Reference
