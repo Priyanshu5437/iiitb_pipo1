@@ -657,89 +657,80 @@ Core Area <br>
 	
 Navigate to results->floorplan and type the Magic command in terminal to open the floorplan <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
+$ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_pipo.def &
 ```
-![14](https://user-images.githubusercontent.com/62461290/187059593-bdf6b441-9cb8-4838-a2a0-5638af1c7c02.png)<br>
+![Screenshot from 2023-02-18 20-39-49](https://user-images.githubusercontent.com/110079807/219873283-0db47e9d-610d-43e0-bfef-534f6de8f719.png)
+
 <br>
 Floorplan view <br>
 <br>
-![Screenshot from 2022-09-19 22-27-05](https://user-images.githubusercontent.com/110079807/219850416-f61f6bf0-9357-48aa-a941-c2c6602e4a13.png)
+![Screenshot from 2023-02-18 20-14-22](https://user-images.githubusercontent.com/110079807/219873443-239b5100-f626-404a-83e6-413841cbbbe9.png)
 
 All the cells are placed in the left corner of the floorplan<br>
 <br>
-![15](https://user-images.githubusercontent.com/62461290/187059629-b135d6dd-dd77-4a0d-a322-6c8864a6210c.png)
+![Screenshot from 2023-02-18 20-15-13](https://user-images.githubusercontent.com/110079807/219873460-8fbb7796-5819-46a3-aa07-ed7473665fc1.png)
+![Screenshot from 2023-02-18 20-21-49](https://user-images.githubusercontent.com/110079807/219873471-97fb4052-cef8-4e18-8b8f-414565cb3c96.png)
+
 
 ## Placement
 ```
 % run_placement
 ```
-![16](https://user-images.githubusercontent.com/62461290/187059712-d8940d40-04f7-4eac-acf6-24ee71c79103.png)<br>
+![Screenshot from 2023-02-18 20-45-52](https://user-images.githubusercontent.com/110079807/219873524-41b82314-ddc0-4631-a682-1c184d5b78d1.png)
 
 ### Placement Reports
 Navigate to results->placement and type the Magic command in terminal to open the placement view <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
+$ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_pipo.def &
 ```
-![19](https://user-images.githubusercontent.com/62461290/187059871-7f4746b1-87ec-40fb-827b-e76df64e3e3d.png)<br>
+![Screenshot from 2023-02-18 20-47-11](https://user-images.githubusercontent.com/110079807/219873591-5dea400a-3bef-4614-bd7d-bdddf9168745.png)
+
 <br>
 Placement View <br>
 <br>
-![17](https://user-images.githubusercontent.com/62461290/187059887-35c59d00-b959-4983-97f7-f229db63ca4b.png)<br>
+![Screenshot from 2023-02-18 20-27-24](https://user-images.githubusercontent.com/110079807/219873675-4039112f-1957-4489-9c2d-bd99f0bd4837.png)
+
 <br>
-![Screenshot 2022-08-28 112324](https://user-images.githubusercontent.com/62461290/187059896-3cd7613c-abdd-4838-81dc-0291a7a63241.png)<br>
-<br>
-<b>sky130_vsdinv</b> in the placement view :<br>
-<br>
-![18](https://user-images.githubusercontent.com/62461290/187059910-27dc9f35-9a5c-4518-8dc5-7c8238747b57.png)<br>
-<br>
-The sky130_vsdinv should also reflect in your netlist after placement <br>
-<br>
-![20](https://user-images.githubusercontent.com/62461290/187060017-d9e3eb1b-2cf6-4056-b7e8-4f9afd9daa5b.png)<br>
+
 
 ## Clock Tree Synthesis
 ```
 % run_cts
 ```
-![21](https://user-images.githubusercontent.com/62461290/187060069-447e33ad-952c-4303-92ac-cfbd45dd91b1.png)<br>
+![Screenshot from 2023-02-18 20-52-30](https://user-images.githubusercontent.com/110079807/219873859-feb52e5a-eed8-4398-96a4-555abcc98099.png)
+
+
 
 ## Routing
 ```
 % run_routing
 ```
-![22](https://user-images.githubusercontent.com/62461290/187060096-ad41aab7-6435-45c8-a266-e6ebb955d691.png)<br>
+![Screenshot from 2023-02-18 20-53-51](https://user-images.githubusercontent.com/110079807/219873924-df68a472-bcc9-484f-a852-3c2bfa462d8f.png)
+
 
 ### Routing Reports
 Navigate to results->routing and type the Magic command in terminal to open the routing view <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
+$ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_pipo.def &
 ```
-![23](https://user-images.githubusercontent.com/62461290/187060186-ec8a606b-9f79-4bb4-b0fe-5088fed426bb.png)<br>
-<br>
+![Screenshot from 2023-02-18 20-27-42](https://user-images.githubusercontent.com/110079807/219873997-54b3fe85-e061-4cde-a0ce-10e037661381.png)
+
 Routing View<br>
 <br>
-![24](https://user-images.githubusercontent.com/62461290/187060219-d3194c75-d7b6-44c8-b760-19688209ca30.png)<br>
+![Screenshot from 2023-02-18 20-27-24](https://user-images.githubusercontent.com/110079807/219874050-a4102530-595d-434c-93a7-d91200ec152b.png)
+
 <br>
-![25](https://user-images.githubusercontent.com/62461290/187060241-5e1341a4-0293-4957-aded-f30660d226e2.png)<br>
+![Screenshot from 2023-02-18 20-29-05](https://user-images.githubusercontent.com/110079807/219874061-d5bef437-5bfa-43a7-950f-2eef9ce3bfde.png)
+
 <br>
-<b>sky130_vsdinv</b> in the routing view :<br>
-<br>
-![26](https://user-images.githubusercontent.com/62461290/187060280-5f093b87-366e-4355-a506-aa140022c78a.png)<br>
-<br>
+
 Area report by magic :<br>
 <br>
-![27](https://user-images.githubusercontent.com/62461290/187060331-cb12a7ce-963a-420e-9b38-12f137c11e9c.png)<br>
+
+![Screenshot from 2023-02-18 20-33-13](https://user-images.githubusercontent.com/110079807/219874103-79b95013-e15e-42e1-8f49-355985135880.png)
+![Screenshot from 2023-02-18 20-58-04](https://user-images.githubusercontent.com/110079807/219874141-897323a7-2dd6-40b0-848d-e02c84d589aa.png)
+
 <br>
-The sky130_vsdinv should also reflect in your netlist after routing <br>
-<br>
-![28](https://user-images.githubusercontent.com/62461290/187060367-db21b544-21b1-4447-9756-bc7aa947d23d.png)<br>
-
-## Viewing Layout in KLayout
-
-![klayou1](https://user-images.githubusercontent.com/62461290/187060556-280c7dc4-0f2f-4c0b-aac3-eec6d542ee06.png) <br>
-
-![klayout2](https://user-images.githubusercontent.com/62461290/187060558-73bbc257-a068-4a11-9cf8-f91d2556b72f.png)<br>
-
-![klayout3](https://user-images.githubusercontent.com/62461290/187060560-52d90a53-e509-4319-ae06-3781c246f384.png)<br>
 
 
 ### NOTE
