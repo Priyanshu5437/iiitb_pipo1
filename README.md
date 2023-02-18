@@ -641,17 +641,21 @@ Flop Ratio = Ratio of total number of flip flops / Total number of cells present
 ```
 % run_floorplan
 ```
-![10](https://user-images.githubusercontent.com/62461290/187059432-528152fe-2ec3-4aea-9045-1a5187dc7266.png)<br>
+
+![Screenshot from 2022-09-19 21-46-20](https://user-images.githubusercontent.com/110079807/219850209-76f2e6ae-76f5-4012-9be8-70267d87fa57.png)
 
 ### Floorplan Reports
 Die Area <br>
+	![Screenshot from 2022-09-19 21-49-18](https://user-images.githubusercontent.com/110079807/219850315-ced8229d-01f5-465e-94fb-56efebe54257.png)
+
 <br>
 ![12 die](https://user-images.githubusercontent.com/62461290/187059493-d33c91d9-d238-4e9c-8a53-0f4a0b6fa40b.png)<br>
 <br>
 Core Area <br>
-<br>
-![11 core](https://user-images.githubusercontent.com/62461290/187059503-233981d6-baf2-46c5-b8e6-979e18baf189.png)<br>
+	![Screenshot from 2022-09-19 21-48-51](https://user-images.githubusercontent.com/110079807/219850307-32613d5f-8cbb-4e3e-8146-29a3de587fa9.png)
 
+<br>
+	
 Navigate to results->floorplan and type the Magic command in terminal to open the floorplan <br>
 ```
 $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
@@ -660,8 +664,8 @@ $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read .
 <br>
 Floorplan view <br>
 <br>
-![13](https://user-images.githubusercontent.com/62461290/187059569-1b8184d1-47e1-4ec3-9539-17e317aedacb.png)<br>
-<br>
+![Screenshot from 2022-09-19 22-27-05](https://user-images.githubusercontent.com/110079807/219850416-f61f6bf0-9357-48aa-a941-c2c6602e4a13.png)
+
 All the cells are placed in the left corner of the floorplan<br>
 <br>
 ![15](https://user-images.githubusercontent.com/62461290/187059629-b135d6dd-dd77-4a0d-a322-6c8864a6210c.png)
