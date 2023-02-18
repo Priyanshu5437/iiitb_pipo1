@@ -372,8 +372,8 @@ To clone the repository, download the netlist files and simulate the results, En
 ```
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/62461290/184837511-a29ecb45-d974-4053-8a1b-7f27b42759d0.png"> <br>
-</p>
+
+![pre_synthesis](https://user-images.githubusercontent.com/110079807/219847344-3bd93fa5-aa12-40ea-a00a-17d32c6b7046.png)
 
 # PostSynthesis
 
@@ -382,9 +382,9 @@ $ yosys
 
 yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
-yosys> read_verilog iiitb_freqdiv.v
+yosys> read_verilog iiitb_pipo.v
 
-yosys> synth -top iiitb_freqdiv
+yosys> synth -top iiitb_pipo
 
 yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
@@ -394,21 +394,16 @@ yosys> stat
 
 yosys> show
 
-yosys> write_verilog iiitb_freqdiv_netlist.v
+yosys> write_verilog iiitb_pipo_netlist.v
 
-$ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v iiitb_freqdiv_netlist.v iiitb_freqdiv_tb.v
+$ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v iiitb_pipo_netlist.v iiitb_pipo_tb.v
 
 $ ./a.out
 
-$ gtkwave iiitb_freqdiv_vcd.vcd
+$ gtkwave iiitb_pipo_vcd.vcd
 ```
-<p align="center">
-<img src="https://user-images.githubusercontent.com/62461290/184857873-012cef05-acf8-4170-b8e4-0f09a664c9ed.png"> <br>
-</p>
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/62461290/184857905-2e755fa3-74ad-4a46-8683-94a24dfcb488.png"> <br>
-</p>
+![post synthesis](https://user-images.githubusercontent.com/110079807/219847504-e17c2cf9-d570-491e-845e-4b423f93439e.png)
+![netlist](https://user-images.githubusercontent.com/110079807/219847534-8798aa21-f330-4c64-ab48-b99122ad34eb.png)
 
 # Creating a Custom Inverter Cell
 
@@ -451,6 +446,7 @@ The spice netlist has to be edited to add the libraries we are using, The final 
 .include ./libs/nshort.lib
 
 
+
 M1001 Y A VGND VGND nshort_model.0 ad=1435 pd=152 as=1365 ps=148 w=35 l=23
 M1000 Y A VPWR VPWR pshort_model.0 ad=1443 pd=152 as=1517 ps=156 w=37 l=23
 VDD VPWR 0 3.3V
@@ -476,15 +472,14 @@ Open the terminal in the directory where ngspice is stored and type the followin
 $ ngspice sky130_inv.spice 
 ```
 
-![3](https://user-images.githubusercontent.com/62461290/187436666-ddcd5d51-b413-4ab8-a6ae-ca06006819dc.png)<br>
-
+![Screenshot from 2022-09-18 22-30-21](https://user-images.githubusercontent.com/110079807/219848002-0b9a4ea8-4d6e-4286-acd6-e5be88fde4f1.png)
 Now you can plot the graphs for the designed inverter model.
 
 ```
 -> plot y vs time a
 ```
+![Screenshot from 2022-09-18 22-36-24](https://user-images.githubusercontent.com/110079807/219848079-dd4fcf82-fef1-4cc2-9611-7bafde35bac6.png)
 
-![4](https://user-images.githubusercontent.com/62461290/187437163-988dac40-0bd4-4ef6-abba-8528bad54659.png)<br>
 
 Four timing parameters are used to characterize the inverter standard cell:<br>
 
@@ -501,8 +496,8 @@ To get a grid and to ensure the ports are placed correctly we can use
 ```
 % grid 0.46um 0.34um 0.23um 0.17um
 ```
+![Screenshot from 2022-09-17 09-39-14](https://user-images.githubusercontent.com/110079807/219848181-a52c8850-3eb5-4be7-89b7-8adc2353195d.png)
 
-![5](https://user-images.githubusercontent.com/62461290/187439583-b2226424-4db2-419f-8e6b-ff1e4d365adb.png)
 
 
 To save the file with a different name, use the folllowing command in tcl window
@@ -528,9 +523,9 @@ The layout is generated using OpenLane. To run a custom design on openlane, Navi
 ```
 $ cd designs
 
-$ mkdir iiitb_freqdiv
+$ mkdir iiitb_pipo
 
-$ cd iiitb_freqdiv
+$ cd iiitb_pipo
 
 $ mkdir src
 
@@ -538,24 +533,25 @@ $ touch config.json
 
 $ cd src
 
-$ touch iiitb_freqdiv.v
+$ touch iiitb_pipo.v
 ```
 
-The iiitb_freqdiv.v file should contain the verilog RTL code you have used and got the post synthesis simulation for. <br>
+The iiitb_pipo.v file should contain the verilog RTL code you have used and got the post synthesis simulation for. <br>
 
 Copy  `sky130_fd_sc_hd__fast.lib`, `sky130_fd_sc_hd__slow.lib`, `sky130_fd_sc_hd__typical.lib` and `sky130_vsdinv.lef` files to `src` folder in your design. <br>
 
 The final src folder should look like this: <br>
 
-![f2](https://user-images.githubusercontent.com/62461290/187058789-46914626-3965-41c8-8336-cff2ed949889.png) <br>
+
+![Screenshot from 2023-02-18 13-26-36](https://user-images.githubusercontent.com/110079807/219848916-2ad1e5ef-9fed-4aaa-b0c3-194949432f6f.png)
 
 The contents of the config.json are as follows. this can be modified specifically for your design as and when required. <br>
 
 As mentioned by kunal sir dont use defined `DIE_AREA` and `FP_SIZING : absolute`, use `FP_SIZING : relative`
 ```
 {
-    "DESIGN_NAME": "iiitb_freqdiv",
-    "VERILOG_FILES": "dir::src/iiitb_freqdiv.v",
+    "DESIGN_NAME": "iiitb_pipo",
+    "VERILOG_FILES": "dir::src/iiitb_pipo.v",
     "CLOCK_PORT": "clkin",
     "CLOCK_NET": "clkin",
     "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
@@ -586,47 +582,50 @@ Save all the changes made above and Navigate to the openlane folder in terminal 
 ```
 $ make mount (if this command doesnot go through prefix it with sudo)
 ```
-![1](https://user-images.githubusercontent.com/62461290/186196147-6c8d37a3-9769-428c-93e2-aefb4c897cf0.png)
+![Screenshot from 2022-09-19 16-11-30](https://user-images.githubusercontent.com/110079807/219849003-c9b3476f-f770-498c-b850-ee796714d600.png)
 
 After entering the openlane container give the following command:<br>
 ```
 $ ./flow.tcl -interactive
 ```
-![2](https://user-images.githubusercontent.com/62461290/186196149-b595f203-a711-46cc-8949-39bee6de552e.png)
+![Screenshot from 2022-09-19 16-11-50](https://user-images.githubusercontent.com/110079807/219849034-85067d3f-ba1f-4332-9dc7-6eaf97bbcaa1.png)
 
 This command will take you into the tcl console. In the tcl console type the following commands:<br>
 
 ```
 % package require openlane 0.9
 ```
-![3](https://user-images.githubusercontent.com/62461290/186196154-c3caa53a-1199-45d1-8903-ba7a1f626c96.png)<br>
+![Screenshot from 2022-09-19 16-12-06](https://user-images.githubusercontent.com/110079807/219849171-8e500e57-d09f-41ee-9de2-2d1d78c64710.png)	
+`
+``
+% prep -design iiitb_pipo
 ```
-% prep -design iiitb_freqdiv
-```
-![4](https://user-images.githubusercontent.com/62461290/186196159-9444df4e-9580-4a04-ba68-c79190d78863.png)<br>
+![Screenshot from 2022-09-19 17-31-18](https://user-images.githubusercontent.com/110079807/219849269-2f027710-3835-45f6-82ab-10a772ca466e.png)
+
 
 The following commands are to merge external the lef files to the merged.nom.lef. In our case sky130_vsdiat is getting merged to the lef file <br>
 ```
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 ```
-![f1](https://user-images.githubusercontent.com/62461290/187058441-e4b64b62-d99d-49b6-8ea5-086afed01b75.png) <br>
-<br>
+![Screenshot from 2022-09-19 17-33-14](https://user-images.githubusercontent.com/110079807/219849306-b1faf800-f447-4fd8-8497-6fe79cec7772.png)
+
 The contents of the merged.nom.lef file should contain the Macro definition of sky130_vsdinv <br>
 <br>
-![f3](https://user-images.githubusercontent.com/62461290/187058907-0105481f-b632-4d0c-8d13-40a7f702a10d.png)
+
+![Screenshot from 2022-09-19 17-44-53](https://user-images.githubusercontent.com/110079807/219849335-facec5d5-416e-4434-9a68-30ab96dbd3cb.png)
 
 ## Synthesis
 ```
 % run_synthesis
 ```
-![5](https://user-images.githubusercontent.com/62461290/186196161-f33eab28-90e1-4697-acf1-cb7f527e00f3.png)<br>
-
+![Screenshot from 2022-09-19 17-55-39](https://user-images.githubusercontent.com/110079807/219849354-c5bae3ab-613f-415d-8f05-b1304d45bb17.png)
 ### Synthesis Reports
 Details of the gates used <br>
 <br>
-![5](https://user-images.githubusercontent.com/62461290/187059146-d8875af6-8feb-4d1a-b908-3fb5c40af428.png)<br>
-<br>
+
+![Screenshot from 2022-09-19 18-28-52](https://user-images.githubusercontent.com/110079807/219849406-52d8ec94-acfd-47cd-a1a6-49fa52646c53.png)
+
 Setup and Hold Slack after synthesis<br>
 <br>
 ![7](https://user-images.githubusercontent.com/62461290/187059191-bc94260c-1867-4167-a6d3-4a2397416b7f.png)<br>
