@@ -688,7 +688,7 @@ $ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130
 
 <br>
 Placement View <br>
-<br>
+
 ![Screenshot from 2023-02-18 20-27-24](https://user-images.githubusercontent.com/110079807/219873675-4039112f-1957-4489-9c2d-bd99f0bd4837.png)
 
 <br>
