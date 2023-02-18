@@ -649,8 +649,7 @@ Die Area <br>
 	![Screenshot from 2022-09-19 21-49-18](https://user-images.githubusercontent.com/110079807/219850315-ced8229d-01f5-465e-94fb-56efebe54257.png)
 
 <br>
-![12 die](https://user-images.githubusercontent.com/62461290/187059493-d33c91d9-d238-4e9c-8a53-0f4a0b6fa40b.png)<br>
-<br>
+
 Core Area <br>
 	![Screenshot from 2022-09-19 21-48-51](https://user-images.githubusercontent.com/110079807/219850307-32613d5f-8cbb-4e3e-8146-29a3de587fa9.png)
 
