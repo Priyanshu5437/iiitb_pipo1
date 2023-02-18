@@ -777,35 +777,10 @@ we can open the mag file and view the layout after the whole process by the foll
 <b><I> Area = 5397.065 um2</b></I> <br>
 
 
-### 3. Performance
 
-```
-$ sta <br>
 
-OpenSTA> read_liberty -max /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__fast.lib <br>
 
-OpenSTA> read_liberty -min /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__slow.lib <br>
-
-OpenSTA> read_verilog /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.resized.v <br>
-
-OpenSTA> link_design iiitb_freqdiv <br>
-
-OpenSTA> read_sdc /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/cts/iiitb_freqdiv.sdc <br>
-
-OpenSTA> read_spef /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.nom.spef <br>
-
-OpenSTA> set_propagated_clock [all_clocks] <br>
-
-OpenSTA> report_checks <br>
-```
-
-![image](https://user-images.githubusercontent.com/62461290/192555217-b263a4e2-cad6-44e3-8682-bb0b70840aa5.png)<br>
-
-![image](https://user-images.githubusercontent.com/62461290/192554957-5c3adff3-850e-4f62-b842-7279bf1ebd6d.png)<br>
-
-<b><I> Performance = 1/(clock period - slack) = 1/(10 - 1.70)ns = 120.482Mhz </b></I><br>
-
-### 4. Flop/standard cell ratio
+### 3. Flop/standard cell ratio
 
 ![Screenshot from 2023-02-19 02-24-02](https://user-images.githubusercontent.com/110079807/219899168-0ead08c4-c94d-411d-9c27-1f07a8c17706.png)
 
