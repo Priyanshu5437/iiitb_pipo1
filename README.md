@@ -738,20 +738,28 @@ We can also run the whole flow at once instead of step by step process by giving
 ```
 $ ./flow.tcl -design iiitb_pipo
 ```
-![100](https://user-images.githubusercontent.com/62461290/186196145-6850e928-d54a-404d-ad30-1fdb124a883b.png)<br>
-<br>
+![Screenshot from 2023-02-18 21-10-46](https://user-images.githubusercontent.com/110079807/219874929-ae521c9a-6db2-411f-9cfe-17413166bf1f.png)
+![Screenshot from 2023-02-18 21-17-47](https://user-images.githubusercontent.com/110079807/219877396-8bf68f8a-a7b1-4f35-9cc1-862f6572e02c.png)
+![Screenshot from 2023-02-18 21-17-57](https://user-images.githubusercontent.com/110079807/219877398-15813ff0-dedb-4afb-92ec-78703603a4a0.png)
+![Screenshot from 2023-02-18 21-18-03](https://user-images.githubusercontent.com/110079807/219877400-afac913d-e4f6-4149-be8d-72590052f16d.png)
+![Screenshot from 2023-02-18 21-18-09](https://user-images.githubusercontent.com/110079807/219877404-b8eb5b3d-0445-4861-837d-5f5f76ca1ed0.png)
+![Screenshot from 2023-02-18 21-18-14](https://user-images.githubusercontent.com/110079807/219877406-17ae4608-b49b-4752-ae09-ef9c6a771df3.png)
+
+	
+	<br>
 All the steps will be automated and all the files will be generated.<br>
 
 we can open the mag file and view the layout after the whole process by the following command, you can follow the path as per the image.<br>
 
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_freqdiv.mag &
+![Screenshot from 2023-02-18 21-18-49](https://user-images.githubusercontent.com/110079807/219875319-f42c5da3-a778-4e3d-a888-10f1ac3ca045.png)
+
 ```
 <br>
 
-![30](https://user-images.githubusercontent.com/62461290/186206184-3f146947-84d9-4178-9dd2-c54330067168.png)<br>
-![31](https://user-images.githubusercontent.com/62461290/186206194-4ea81f2f-ab7f-4d34-840d-7aabff547774.png)<br>
-![32](https://user-images.githubusercontent.com/62461290/186206196-526af125-b092-4bfc-9025-33dad27a3e6e.png)<br>
+![Screenshot from 2023-02-18 21-19-15](https://user-images.githubusercontent.com/110079807/219877445-3bb38688-8740-45bc-8e4a-4ae563f3056a.png)
+![Screenshot from 2023-02-18 21-19-30](https://user-images.githubusercontent.com/110079807/219877448-cf19bc45-30f4-4c23-b3ce-44ea3c58d2de.png)
+
 
 # Results post-layout
 
