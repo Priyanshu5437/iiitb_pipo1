@@ -814,12 +814,13 @@ OpenSTA> report_checks <br>
 
 ### 5. Power (internal, switching, leakage and total)
 
-![image](https://user-images.githubusercontent.com/62461290/192557539-51cbc494-67f6-4a8f-9b39-cd5da92613b5.png) <br>
+![Screenshot from 2023-02-19 02-38-49](https://user-images.githubusercontent.com/110079807/219899611-cc8e61de-91cd-4df5-bd88-a876dc7f309c.png)
+ <br>
 
-<b><I> Internal Power = 97.9 uW (74.4%) </b></I><br>
-<b><I> Switching Power = 33.7 uW (25.6%) </b></I><br>
-<b><I> Leakage Power = 0.459 nW (0.00%) </b></I><br>
-<b><I> Total Power = 132 uW (100%) </b></I><br>
+<b><I> Internal Power = 3.02 uW (72.4%) </b></I><br>
+<b><I> Switching Power =  1.15 uW (27.6%) </b></I><br>
+<b><I> Leakage Power = 0.141 nW (0.00%) </b></I><br>
+<b><I> Total Power = 4.18 uW (100%) </b></I><br>
 
 
 
