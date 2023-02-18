@@ -623,20 +623,18 @@ The contents of the merged.nom.lef file should contain the Macro definition of s
 Details of the gates used <br>
 <br>
 
-![Screenshot from 2022-09-19 18-28-52](https://user-images.githubusercontent.com/110079807/219849406-52d8ec94-acfd-47cd-a1a6-49fa52646c53.png)
+![Screenshot from 2022-09-19 19-28-09](https://user-images.githubusercontent.com/110079807/219849849-d4d69361-3736-4659-80cd-587ad2eaa7bd.png)
+
 
 Setup and Hold Slack after synthesis<br>
 <br>
-![7](https://user-images.githubusercontent.com/62461290/187059191-bc94260c-1867-4167-a6d3-4a2397416b7f.png)<br>
-<br>
+![Screenshot from 2022-09-19 20-28-37](https://user-images.githubusercontent.com/110079807/219849883-18311de6-9e61-40c0-8254-994b7bc6254e.png)
+
 ```
 Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 8/71 = 0.1125
 ```
 <br>
-The sky130_vsdinv should also reflect in your netlist after synthesis <br>
-<br>
 
-![9](https://user-images.githubusercontent.com/62461290/187059397-9d745276-f506-45cb-a62f-c369a165e8e9.png)
 
 
 ## Floorplan
