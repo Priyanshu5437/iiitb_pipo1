@@ -807,10 +807,10 @@ OpenSTA> report_checks <br>
 
 ### 4. Flop/standard cell ratio
 
-![image](https://user-images.githubusercontent.com/62461290/192561408-44f38899-38d3-4b34-89f5-1b25cb59a143.png) <br>
+![Screenshot from 2023-02-19 02-24-02](https://user-images.githubusercontent.com/110079807/219899168-0ead08c4-c94d-411d-9c27-1f07a8c17706.png)
 
 
-<b><I>Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 8/71 = 0.1125 </b></I><br>
+<b><I>Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/12 = 0.333 </b></I><br>
 
 ### 5. Power (internal, switching, leakage and total)
 
