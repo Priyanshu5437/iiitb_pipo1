@@ -664,7 +664,7 @@ $ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130
 
 <br>
 Floorplan view <br>
-<br>
+
 ![Screenshot from 2023-02-18 20-14-22](https://user-images.githubusercontent.com/110079807/219873443-239b5100-f626-404a-83e6-413841cbbbe9.png)
 
 All the cells are placed in the left corner of the floorplan<br>
