@@ -746,16 +746,16 @@ $ ./flow.tcl -design iiitb_pipo
 ![Screenshot from 2023-02-18 21-18-14](https://user-images.githubusercontent.com/110079807/219877406-17ae4608-b49b-4752-ae09-ef9c6a771df3.png)
 
 	
-	<br>
+	
 All the steps will be automated and all the files will be generated.<br>
 
 we can open the mag file and view the layout after the whole process by the following command, you can follow the path as per the image.<br>
 
-```
+
 ![Screenshot from 2023-02-18 21-18-49](https://user-images.githubusercontent.com/110079807/219875319-f42c5da3-a778-4e3d-a888-10f1ac3ca045.png)
 
-```
-<br>
+
+
 
 ![Screenshot from 2023-02-18 21-19-15](https://user-images.githubusercontent.com/110079807/219877445-3bb38688-8740-45bc-8e4a-4ae563f3056a.png)
 ![Screenshot from 2023-02-18 21-19-30](https://user-images.githubusercontent.com/110079807/219877448-cf19bc45-30f4-4c23-b3ce-44ea3c58d2de.png)
