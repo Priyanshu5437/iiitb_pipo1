@@ -49,9 +49,9 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
 [Results Post Layout](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#results-post-layout) <br>
 * [1. Post layout synthesis gate count](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#1-post-layout-synthesis-gate-count)<br>
 * [2. Area (box command)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#2-area-box-command)<br>
-* [3. Performance](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#3-performance)<br>
-* [4. Flop/Standard cell ratio](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#4-flopstandard-cell-ratio)<br>
-* [5. Power (internal,switching,leakage and total)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#5-power-internal-switching-leakage-and-total)<br>
+
+* [3. Flop/Standard cell ratio](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#4-flopstandard-cell-ratio)<br>
+* [4. Power (internal,switching,leakage and total)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#5-power-internal-switching-leakage-and-total)<br>
 
 
 
@@ -787,7 +787,7 @@ we can open the mag file and view the layout after the whole process by the foll
 
 <b><I>Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/12 = 0.333 </b></I><br>
 
-### 5. Power (internal, switching, leakage and total)
+### 4. Power (internal, switching, leakage and total)
 
 ![Screenshot from 2023-02-19 02-38-49](https://user-images.githubusercontent.com/110079807/219899611-cc8e61de-91cd-4df5-bd88-a876dc7f309c.png)
  <br>
