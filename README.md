@@ -1,5 +1,81 @@
 # iiitb_pipo- Parallel in parallel out shift register
-INTRODUCTION
+parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits.
+
+# Table of Contents
+
+[Description](https://github.com/Priyanshu5437/iiitb_pipo#description)<br>
+<br>
+[Tools Used](https://github.com/Priyanshu5437/iiitb_pipo#tools-used)<br>
+* [Icarus Verilog (iverilog) GTKWave installation](https://github.com/Priyanshu5437/iiitb_pipo#icarus-verilog-iverilog-gtkwave-installation)<br>
+* [Yosys installation](https://github.com/Priyanshu5437/iiitb_pipo#yosys-installation)<br>
+* [Python installation](https://github.com/Priyanshu5437/iiitb_pipo#python-installation)<br>
+* [Docker installation](https://github.com/Priyanshu5437/iiitb_pipo#docker-installation)<br>
+* [Openlane installation](https://github.com/Priyanshu5437/iiitb_pipo#openlane-installation)<br>
+* [Magic installation](https://github.com/Priyanshu5437/iiitb_pipo#magic-installation)<br>
+    - [installing csh](https://github.com/Priyanshu5437/iiitb_pipo#installing-csh)<br>
+    - [installing x11/xorg](https://github.com/Priyanshu5437/iiitb_pipo#installing-x11xorg)<br>
+    - [installing GCC](https://github.com/Priyanshu5437/iiitb_pipo#installing-gcc)<br>
+    - [installing Build Essentials](https://github.com/Priyanshu5437/iiitb_pipo#installing-build-essential)<br>
+    - [installing OpenGL](https://github.com/Priyanshu5437/iiitb_pipo#installing-opengl)<br>
+    - [installing tcl/tk](https://github.com/Priyanshu5437/iiitb_pipo#installing-tcltk)
+    - [installing magic](https://github.com/Priyanshu5437/iiitb_pipo#installing-magic)<br>
+ * [klayout installation](https://github.com/Priyanshu5437/iiitb_pipo#klayout-installation)<br>
+ * [ngspice installation](https://github.com/Priyanshu5437/iiitb_pipo#ngspice-installation)<br>
+
+
+[PreSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#presynthesis)<br>
+ <br>
+[PostSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#postsynthesis)<br>
+ <br>
+ 
+ [Creating a Custom Cell](https://github.com/Priyanshu5437/iiitb_pipo/edit/main/README.md#creating-a-custom-inverter-cell)
+ 
+[Layout](https://github.com/Priyanshu5437/iiitb_pipo#layout)<br>
+ * [Preparation](https://github.com/Priyanshu5437/iiitb_pipo#preparation)<br>
+ * [Synthesis](https://github.com/Priyanshu5437/iiitb_pipo#synthesis)<br>
+     - [Synthesis Reports](https://github.com/Priyanshu5437/iiitb_pipo#synthesis-reports)<br>
+ * [Floorplan](https://github.com/Priyanshu5437/iiitb_pipo#floorplan)<br>
+     - [Floorplan Reports](https://github.com/Priyanshu5437/iiitb_pipo#floorplan-reports)<br>
+ * [Placement](https://github.com/Priyanshu5437/iiitb_pipo#placement)<br>
+     - [placement Reports](https://github.com/Priyanshu5437/iiitb_pipo#placement-reports)<br>
+ * [Clock Tree Synthesis](https://github.com/Priyanshu5437/iiitb_pipo#clock-tree-synthesis)<br>
+ * [Routing](https://github.com/Priyanshu5437/iiitb_pipo#routing)<br>
+     - [Routing Reports](https://github.com/Priyanshu5437/iiitb_pipo#routing-reports)<br>
+
+
+ [Note](https://github.com/Priyanshu5437/iiitb_pipo#note)<br>
+ <br>
+
+[Results Post Layout](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#results-post-layout) <br>
+* [1. Post layout synthesis gate count](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#1-post-layout-synthesis-gate-count)<br>
+* [2. Area (box command)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#2-area-box-command)<br>
+* [3. Performance](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#3-performance)<br>
+* [4. Flop/Standard cell ratio](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#4-flopstandard-cell-ratio)<br>
+* [5. Power (internal,switching,leakage and total)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#5-power-internal-switching-leakage-and-total)<br>
+
+
+
+
+[Errors and Solutions](https://github.com/Priyanshu5437/iiitb_pipo#errors-and-solutions)<br>
+ * [Error 1 : make mount permission denied](https://github.com/Priyanshu5437/iiitb_pipo#error-1)<br>
+ * [Error 2 : placement failed error](https://github.com/Priyanshu5437/iiitb_pipo#error-2)<br>
+ * [Error 3 : Files name mismatch error](https://github.com/Priyanshu5437/iiitb_pipo#error-3)<br>
+ * [Error 4 : No Macro Error](https://github.com/Priyanshu5437/iiitb_pipo#error-4)<br>
+ * [Error 5 : sky130_vsdinv not reflecting in stat](https://github.com/Priyanshu5437/iiitb_pipo#error-5)<br>
+ * [Error 6: List index out of range](https://github.com/Priyanshu5437/iiitb_pipo#error-6)<br>
+ * [Error 7: Can't read sky130_vsdinv error in tcl window](https://github.com/Priyanshu5437/iiitb_pipo#error-7)<br>
+ * [Error 8: PL_TARGET DENSITY error](https://github.com/Priyanshu5437/iiitb_pipo#error-8)<br>
+ 
+
+
+ 
+ [References](https://github.com/Priyanshu5437/iiitb_pipo#reference)<br>
+ [Author](https://github.com/Priyanshu5437/iiitb_pipo#author)<br>
+ [Contributors](https://github.com/Priyanshu5437/iiitb_pipo#contributors)<br>
+ [Acknowledgement](https://github.com/Priyanshu5437/iiitb_pipo#acknowledgement)<br>
+ <br>
+
+Descripton
 
 Shift registers are some sort of sequential logic circuitries that are majorly deployed to store data in digital format and mainly for storage of digital data and in the digital circuit to hold temporary data [3]. They are a group of flip-flops connected in a chain so that the output from one flip-flop becomes the input of the next flip-flop. Most of the registers possess no characteristic internal sequence of states. All flip-flop is driven by a common clock, and all are reset simultaneously. There are basically five types of shift registers are present, such as Serial In - Serial Out (SISO), Serial In - Parallel Out(SIPO), Parallel In – Serial Out(PISO), Parallel In - Parallel Out(PIPO), and bidirectional shift registers. 
 
@@ -103,105 +179,7 @@ Post synthesis simulation
 ![post synthesis](https://user-images.githubusercontent.com/110079807/185232688-cc14aa7e-c6d9-453a-ba5e-ed6946daa4fd.png)
 
  
- # Table of Contents
-
-[Description](https://github.com/Priyanshu5437/iiitb_pipo#description)<br>
-<br>
-[Tools Used](https://github.com/Priyanshu5437/iiitb_pipo#tools-used)<br>
-* [Icarus Verilog (iverilog) GTKWave installation](https://github.com/Priyanshu5437/iiitb_pipo#icarus-verilog-iverilog-gtkwave-installation)<br>
-* [Yosys installation](https://github.com/Priyanshu5437/iiitb_pipo#yosys-installation)<br>
-* [Python installation](https://github.com/Priyanshu5437/iiitb_pipo#python-installation)<br>
-* [Docker installation](https://github.com/Priyanshu5437/iiitb_pipo#docker-installation)<br>
-* [Openlane installation](https://github.com/Priyanshu5437/iiitb_pipo#openlane-installation)<br>
-* [Magic installation](https://github.com/Priyanshu5437/iiitb_pipo#magic-installation)<br>
-    - [installing csh](https://github.com/Priyanshu5437/iiitb_pipo#installing-csh)<br>
-    - [installing x11/xorg](https://github.com/Priyanshu5437/iiitb_pipo#installing-x11xorg)<br>
-    - [installing GCC](https://github.com/Priyanshu5437/iiitb_pipo#installing-gcc)<br>
-    - [installing Build Essentials](https://github.com/Priyanshu5437/iiitb_pipo#installing-build-essential)<br>
-    - [installing OpenGL](https://github.com/Priyanshu5437/iiitb_pipo#installing-opengl)<br>
-    - [installing tcl/tk](https://github.com/Priyanshu5437/iiitb_pipo#installing-tcltk)
-    - [installing magic](https://github.com/Priyanshu5437/iiitb_pipo#installing-magic)<br>
- * [klayout installation](https://github.com/Priyanshu5437/iiitb_pipo#klayout-installation)<br>
- * [ngspice installation](https://github.com/Priyanshu5437/iiitb_pipo#ngspice-installation)<br>
-
-
-[PreSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#presynthesis)<br>
- <br>
-[PostSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#postsynthesis)<br>
- <br>
- 
- [Creating a Custom Cell](https://github.com/DantuNandiniDevi/iiitb_freqdiv/edit/main/README.md#creating-a-custom-inverter-cell)
- 
-[Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#layout)<br>
- * [Preparation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#preparation)<br>
- * [Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis)<br>
-     - [Synthesis Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis-reports)<br>
- * [Floorplan](https://github.com/DantuNandiniDevi/iiitb_freqdiv#floorplan)<br>
-     - [Floorplan Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#floorplan-reports)<br>
- * [Placement](https://github.com/DantuNandiniDevi/iiitb_freqdiv#placement)<br>
-     - [placement Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#placement-reports)<br>
- * [Clock Tree Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#clock-tree-synthesis)<br>
- * [Routing](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing)<br>
-     - [Routing Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing-reports)<br>
-
-
- [Viewing layout in klayout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#viewing-layout-in-klayout)<br>
- <br>
- [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
- <br>
-
-[Results Post Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#results-post-layout) <br>
-* [1. Post layout synthesis gate count](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#1-post-layout-synthesis-gate-count)<br>
-* [2. Area (box command)](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#2-area-box-command)<br>
-* [3. Performance](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#3-performance)<br>
-* [4. Flop/Standard cell ratio](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#4-flopstandard-cell-ratio)<br>
-* [5. Power (internal,switching,leakage and total)](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#5-power-internal-switching-leakage-and-total)<br>
-
-
-[Tapeout : Caravel Flow](https://github.com/DantuNandiniDevi/iiitb_freqdiv#tapeout--caravel-flow)<br>
-<br>
-
-[Errors and Solutions](https://github.com/Priyanshu5437/iiitb_pipo#errors-and-solutions)<br>
- * [Error 1 : make mount permission denied](https://github.com/Priyanshu5437/iiitb_pipo#error-1)<br>
- * [Error 2 : placement failed error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
- * [Error 3 : Files name mismatch error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
- * [Error 4 : No Macro Error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-4)<br>
- * [Error 5 : sky130_vsdinv not reflecting in stat](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-5)<br>
- * [Error 6: List index out of range](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-6)<br>
- * [Error 7: Can't read sky130_vsdinv error in tcl window](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-7)<br>
- * [Error 8: PL_TARGET DENSITY error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-8)<br>
- 
-
-
- 
- [References](https://github.com/Priyanshu5437/iiitb_pipo#reference)<br>
- [Author](https://github.com/Priyanshu5437/iiitb_pipo#author)<br>
- [Contributors](https://github.com/Priyanshu5437/iiitb_pipo#contributors)<br>
- [Acknowledgement](https://github.com/Priyanshu5437/iiitb_pipo#acknowledgement)<br>
- <br>
- 
-# Description
-
-This document is a model and analysis of a Freqency Divider. This model will contain a 4 bit number lines to select by which factor does the input frequency has to be divided. It is simulated using verilog, synthesis is performed using yosys.
-
-A frequency divider takes an input frequency and generated a output frequency depending on the division factor. One of the well-known application of frequency divider is a phase lock loop, which generates multiples of a reference frequency. The other applications include frequency synthesizers, audio equipments, radar and satellite communication, Military equipments and RF devices. It is basically used in any application where frequency matching is needed and down scaling of frequency has to performed.
-
-
-<p align="center">
-<img src="http://www.sciweavers.org/tex2img.php?eq=fout%20%3D%20\frac{fin}{n}&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=">
-</p>
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/62461290/182013018-3f34c600-2481-42fb-b9fd-366531d73fbd.png"> <br>
-Fig 1: Frequency Divider
-</p>
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/62461290/182013020-8a4a628e-071b-42b2-ba3a-034c2731935d.png"> <br>
-Fig 2: Basic I/O diagram
-</p>
-
-# Tools Used
+ # Tools Used
 The installtion commands are given by taking ubuntu as the operating system.
 
 For installating various softwares used in this project, open the terminal by right clicking on an empty space and type the respective commands in the terminal: <br>
@@ -382,15 +360,15 @@ To start the project you first need to create a new repository based on the `car
 To clone the repository, download the netlist files and simulate the results, Enter the following commands in your terminal:
 
 ```
- $ git clone https://github.com/DantuNandiniDevi/iiitb_freqdiv 
+ $ git clone https://github.com/Priyanshu5437/iiitb_pipo
 
- $ cd iiitb_freqdiv 
+ $ cd iiitb_pipo
  
- $ iverilog -o iiitb_freqdiv_out.out iiitb_freqdiv.v iiitb_freqdiv_tb.v
+ $ iverilog -o iiitb_pipo_out.out iiitb_pipo.v iiitb_pipo_tb.v
  
- $ ./iiitb_freqdiv_out.out
+ $ ./iiitb_pipo_out.out
  
- $ gtkwave iiitb_freqdiv_vcd.vcd
+ $ gtkwave iiitb_pipo_vcd.vcd
 ```
 
 <p align="center">
