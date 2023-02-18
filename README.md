@@ -850,33 +850,25 @@ Make sure the name of the module is same throughout, otherwise it will not infer
 
 ## Error 4
 
-If you are getting the below error please add `"TEST_EXTERNAL_GLOB": "dir::../iiitb_pipo/src/*"` to the config.json file.
-<br>
-![Screenshot from 2023-02-19 00-26-54](https://user-images.githubusercontent.com/110079807/219883400-1a58d6bc-1a75-4c04-90ab-106ba0f34b47.png)![Screenshot from 2023-02-19 00-27-09](https://user-images.githubusercontent.com/110079807/219883401-556819b2-10f7-42c2-b057-577b6e6c29ba.png)
-
-<br>
-
-
-## Error 5
 
 If the sky130_vsdinv files are not getting reflected in stat even when the merging was successful and the cell is seen in the merged.nom.lef file. Please use the libraries uploaded in this github page to get the sky130_vsdinv to reflecct in your stat.<br>
 
 `"SYNTH_DRIVING_CELL":"sky130_vsdinv"` please add this to the config.json file while including these libraries. <br>
 
-## Error 6
+## Error 5
 
 If you are getting the below error, please check the file name and macro name of `sky130_vsdinv` shoud be same as the once mentioned in  `sky130_fd_sc_hd__fast.lib`, `sky130_fd_sc_hd__slow.lib`, `sky130_fd_sc_hd__typical.lib`<br>
 <br>
 
 ![WhatsApp Image 2022-08-30 at 4 16 12 PM](https://user-images.githubusercontent.com/62461290/187418027-9c620ff6-c86f-4695-8e65-20ac84898742.jpeg)
 
-## Error 7
+## Error 6
 
 If you are getting the below error, please use merged.nom.lef file while opening def files using magic. <br>
 
 ```
 $ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_pipo.def &
-`
+```
 
 ![error7](https://user-images.githubusercontent.com/62461290/187417649-cbafa63e-a68b-4497-9f59-eee3e6963b2c.png)
 
