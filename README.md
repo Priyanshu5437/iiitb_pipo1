@@ -596,8 +596,7 @@ This command will take you into the tcl console. In the tcl console type the fol
 % package require openlane 0.9
 ```
 ![Screenshot from 2022-09-19 16-12-06](https://user-images.githubusercontent.com/110079807/219849171-8e500e57-d09f-41ee-9de2-2d1d78c64710.png)	
-`
-``
+```
 % prep -design iiitb_pipo
 ```
 ![Screenshot from 2022-09-19 17-31-18](https://user-images.githubusercontent.com/110079807/219849269-2f027710-3835-45f6-82ab-10a772ca466e.png)
