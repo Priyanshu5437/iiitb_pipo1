@@ -784,6 +784,7 @@ we can open the mag file and view the layout after the whole process by the foll
 ### 3. Flop/standard cell ratio
 
 
+![Screenshot from 2023-02-19 02-24-02](https://user-images.githubusercontent.com/110079807/219962234-6c67ea7c-3dcf-4d2f-9b18-72a4195af8c3.png)
 
 <b><I>Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/12 = 0.333 </b></I><br>
 
