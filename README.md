@@ -765,16 +765,17 @@ we can open the mag file and view the layout after the whole process by the foll
 # Results post-layout
 
 ### 1. Post Layout synthesis gate count
+![Screenshot from 2023-02-19 01-02-22](https://user-images.githubusercontent.com/110079807/219961967-606da75f-2bec-4a86-a95c-bdf60c4147f2.png)
 
-![image](https://user-images.githubusercontent.com/62461290/192561109-5060bb00-2d5f-41c1-a6b1-f42803c02af1.png) <br>
 
-<b><I> Gate Count = 71 </b></I> <br>
+
+<b><I> Gate Count =12 </b></I> <br>
 
 ### 2. Area (box command)
+![Screenshot from 2023-02-19 01-47-58](https://user-images.githubusercontent.com/110079807/219962039-35e08cbc-c6ac-41c1-b27c-914d007cd776.png)
 
-![image](https://user-images.githubusercontent.com/62461290/192560025-fbbdb1ea-5964-48fe-81a5-bbf15ee119af.png) <br>
 
-<b><I> Area = 5397.065 um2</b></I> <br>
+<b><I> Area = 0.0 um2</b></I> <br>
 
 
 
@@ -782,7 +783,6 @@ we can open the mag file and view the layout after the whole process by the foll
 
 ### 3. Flop/standard cell ratio
 
-![Screenshot from 2023-02-19 02-24-02](https://user-images.githubusercontent.com/110079807/219899168-0ead08c4-c94d-411d-9c27-1f07a8c17706.png)
 
 
 <b><I>Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/12 = 0.333 </b></I><br>
