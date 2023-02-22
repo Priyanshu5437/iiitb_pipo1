@@ -10,7 +10,7 @@ Register
 • Two basic functions: data storage and data movement.
 
 For parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits. The following circuit is a four-bit parallel in - parallel out shift register constructed by D flip-flops.  Fig. 1: Parallel in Parallel Out Design the D's are the parallel inputs and the Q's are the parallel outputs and “clear” is to reset the output of each flip-flop to the 0 logic level. Once the register is clocked, all the data at the D inputs appear at the corresponding Q outputs simultaneously.
-### BLOCK DIAGRAM
+### Block Diagram
 
 ![Shift_reg5](https://user-images.githubusercontent.com/110079807/184118006-eb8baad2-4757-467d-aac2-61650bacb218.png)
 
@@ -231,7 +231,7 @@ $ sudo apt-get install klayout
 $ sudo apt-get install ngspice
 ```
 
-## Tapeout : Caravel flow installation
+### Tapeout : Caravel flow installation
 
 To start the project you first need to create a new repository based on the `caravel_user_project <https://github.com/efabless/caravel_user_project/>`_ template and make sure your repo is public and includes a README.
 
@@ -341,7 +341,7 @@ run
 
 Open the terminal in the directory where ngspice is stored and type the following command, ngspice console will open:
 
-```
+
 $ ngspice sky130_inv.spice 
 ```
 
@@ -645,7 +645,7 @@ we can open the mag file and view the layout after the whole process by the foll
 
 
 
-# Reference
+### Reference
 
 
 - https://en.wikipedia.org/wiki/Pipo
@@ -657,7 +657,7 @@ we can open the mag file and view the layout after the whole process by the foll
 
 - https://github.com/kunalg123/vsdflow
 
-# Author
+### Author
 
 - Priyanshu
 
@@ -666,7 +666,7 @@ we can open the mag file and view the layout after the whole process by the foll
 - Dantu Nandini Devi </br>
 - Kunal Ghosh </br>
 
-# Acknowledgement
+### Acknowledgement
 
 
 - Kunal Ghosh, VSD Corp. Pvt. Ltd. </br>
@@ -677,7 +677,7 @@ we can open the mag file and view the layout after the whole process by the foll
 - Open Road
 - Google
 
-# Contact Information
+### Contact Information
 
 - Priyanshu, Mtech Student, IIITB, priyanshusingh0402.ps@gmail.com </br>
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com </br>
