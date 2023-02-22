@@ -98,143 +98,85 @@ Post synthesis simulation
 ![post synthesis](https://user-images.githubusercontent.com/110079807/185232688-cc14aa7e-c6d9-453a-ba5e-ed6946daa4fd.png)
 # Tools Used
 
-## Icarus Verilog (iverilog) GTKWave installation
-
-```
-$ sudo apt-get update
-
-$ sudo apt-get install iverilog gtkwave 
-```
-
-## Yosys installation
-
-$ git clone https://github.com/YosysHQ/yosys.git
-
-$ cd yosys-master
-
-$ sudo apt install make (If make is not installed please install it)
-
-$ sudo apt-get install build-essential clang bison flex \
-    libreadline-dev gawk tcl-dev libffi-dev git \
-    graphviz xdot pkg-config python3 libboost-system-dev \
-    libboost-python-dev libboost-filesystem-dev zlib1g-dev
-
-$ make
-
-$ sudo make install
-```
-
-## Python Installation
+### Layout
+#### OpenLane and Magic Tool Installation
+##### Installation of Python3
 ```
 $ sudo apt install -y build-essential python3 python3-venv python3-pip
 ```
-
-## Docker Installation
+##### Installation of Docker
 ```
 $ sudo apt-get remove docker docker-engine docker.io containerd runc (removes older version of docker if installed)
-
 $ sudo apt-get update
-
 $ sudo apt-get install \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release
-    
+    lsb-release    
 $ sudo mkdir -p /etc/apt/keyrings
-
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
 $ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null  
 $ sudo apt-get update
-
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-
 $ apt-cache madison docker-ce (copy the version string you want to install)
-
 $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin (paste the version string copies in place of <VERSION_STRING>)
-
 $ sudo docker run hello-world (If the docker is successfully installed u will get a success message here)
 ```
-
-## OpenLane Installation
+##### Installation of OpenLane on ubuntu
 ```
 $ git clone https://github.com/The-OpenROAD-Project/OpenLane.git
-
 $ cd OpenLane/
-
 $ make
-
 $ make test
 ```
-
-## Magic Installation
-
-For Magic to be installed and work properly the following softwares have to be installed first:
-
-### Installing csh
+##### Installation of magic on ubuntu
+Additional packages to be installed as a part of system requirements to compile magic before magic installation.<br>
+###### Installing M4 preprocessor
 ```
-$ sudo apt-get install csh
+$ sudo apt-get install m4
 ```
-
-### Installing x11/xorg
+###### Installing tcsh shell
 ```
-$ sudo apt-get install x11
-
-$ sudo apt-get install xorg
-
-$ sudo apt-get install xorg openbox
+$ sudo apt-get install tcsh
 ```
-
-### Installing GCC
+###### Installing csh shell
 ```
-$ sudo apt-get install gcc
+$ sudo apt-get install csh 
 ```
-
-### Installing build-essential
+###### Installing Xlib.h
 ```
-$ sudo apt-get install build-essential
+$ sudo apt-get install libx11-dev
 ```
-
-### Installing OpenGL
-```
-$ sudo apt-get install freeglut3-dev
-```
-
-### Installing tcl/tk
+###### Installing Tcl/Tk
 ```
 $ sudo apt-get install tcl-dev tk-dev
 ```
-### Installing magic
-After all the softwares are installed, run the following commands for installing magic:
-
+###### Installing Cairo
+```
+$ sudo apt-get install libcairo2-dev
+```
+###### Installing OpenGL
+```
+$ sudo apt-get install mesa-common-dev libglu1-mesa-dev
+```
+###### Installing ncurses
+```
+$ sudo apt-get install libncurses-dev
+```
+###### Installing Magic
 ```
 $ git clone https://github.com/RTimothyEdwards/magic
-
 $ cd magic
-
 $ ./configure
-
 $ make
-
 $ make install
 ```
-
-## Klayout Installation
-
+##### Installing Klayout
 ```
 $ sudo apt-get install klayout
 ```
-
-## ngspice Installation
-
-```
-$ sudo apt-get install ngspice
-```
-
 ### Tapeout : Caravel flow installation
 
 To start the project you first need to create a new repository based on the `caravel_user_project <https://github.com/efabless/caravel_user_project/>`_ template and make sure your repo is public and includes a README.
