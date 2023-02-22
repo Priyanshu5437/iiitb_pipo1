@@ -2,13 +2,14 @@
 parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits.
 
 ### Descripton
-Shift registers are some sort of sequential logic circuitries that are majorly deployed to store data in digital format and mainly for storage of digital data and in the digital circuit to hold temporary data [3]. They are a group of flip-flops connected in a chain so that the output from one flip-flop becomes the input of the next flip-flop. Most of the registers possess no characteristic internal sequence of states. All flip-flop is driven by a common clock, and all are reset simultaneously. There are basically five types of shift registers are present, such as Serial In - Serial Out (SISO), Serial In - Parallel Out(SIPO), Parallel In – Serial Out(PISO), Parallel In - Parallel Out(PIPO), and bidirectional shift registers. 
+Shift registers are a type of sequential logic circuitry that are primarily used for digital data storage and temporary data holding in digital circuits. They are made up of a series of interconnected flip-flops, with each flip-flop's output becoming the input of the next. Most shift registers do not have any inherent internal sequence of states, and are driven by a common clock and reset simultaneously. There are five main types of shift registers: Serial In - Serial Out (SISO), Serial In - Parallel Out (SIPO), Parallel In - Serial Out (PISO), Parallel In - Parallel Out (PIPO), and bidirectional shift registers. Each shift register consists of a set of n flip-flops, where each flip-flop can store one bit of data. These registers perform two fundamental functions: data storage and data movement.
+
 Register  
 • A set of n flip-flops. 
 • Each flip-flop stores one bit. 
 • Two basic functions: data storage and data movement.
 
-For parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits. The following circuit is a four-bit parallel in - parallel out shift register constructed by D flip-flops.  Fig. 1: Parallel in Parallel Out Design the D's are the parallel inputs and the Q's are the parallel outputs and “clear” is to reset the output of each flip-flop to the 0 logic level. Once the register is clocked, all the data at the D inputs appear at the corresponding Q outputs simultaneously.
+Parallel in - parallel out shift registers allow for immediate availability of all data bits on the parallel outputs once they are entered simultaneously. A four-bit parallel in - parallel out shift register constructed using D flip-flops is shown in Figure 1, where the parallel inputs are denoted as D, the parallel outputs as Q, and "clear" resets the output of each flip-flop to the 0 logic level. After being clocked, all the data at the D inputs appears simultaneously at the corresponding Q outputs
 
 ### Block Diagram
 
@@ -41,24 +42,22 @@ Synthesis transforms the simple RTL design into a gate-level netlist with all th
 
 Synthesis takes place in multiple steps:
 
--Converting RTL into simple logic gates.
--Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
--Optimizing the mapped netlist keeping the constraints set by the designer intact.
+- Converting RTL into simple logic gates.
+- Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
+- Optimizing the mapped netlist keeping the constraints set by the designer intact.
+- Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes   as needed by extending the yosys C++ code base.
+- Yosys is free software licensed under the ISC license (a GPL compatible license that is similar in terms to the MIT license or the 2-clause BSD  license).
 
-Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the yosys C++ code base.
-
-Yosys is free software licensed under the ISC license (a GPL compatible license that is similar in terms to the MIT license or the 2-clause BSD license).
-
-To install Yosys in Ubuntu, follow the following steps:
+##### To install Yosys follow the following steps:
 ```
 $ sudo apt-get install build-essential clang bison flex \ libreadline-dev gawk tcl-dev libffi-dev git \ graphviz xdot pkg-config python3 libboost-system-dev \ libboost-python-dev libboost-filesystem-dev zlib1g-dev
 ```
-To configure the build system to use a specific compiler, use one of the following command:
+##### To configure the build system to use a specific compiler, use one of the following command:
 ```
 $ make config-clang
 $ make config-gcc
 ```
-To build Yosys simply type 'make' in this directory.
+##### To build Yosys simply type 'make' in this directory.
 ```
 $ make
 $ sudo make install
@@ -72,14 +71,17 @@ Below picture gives an insight of the procedure. Here while using iverilog, you 
 To clone the repository and download the netlist files for simulation, enter the following command in your terminal
 
 $ git clone https://github.com/Priyanshu5437/iiitb_pipo
-After cloning the git repository, type the following in "iiitb_pipo" directory in the terminal for RTL Simulation.
 
+After cloning the git repository, type the following in "iiitb_pipo" directory in the terminal for RTL Simulation.
+```
 $ iverilog iiitb_pipo.v iiitb_pipo_tb.v
 $ ./a.out 
 $ gtkwave iiitb_pipo_out.vcd
+```
 For synthesis, run "yosys_run.sh" file in the same directory in terminal.
-
+```
 $ yosys -s yosys_run.sh
+```
 The above commands create the netlist of iverilog code.
 
 For Gate level syntheses(GLS), type the following in the same directory in terminal
@@ -89,13 +91,16 @@ To generate the simulation, type the following in the same directory in terminal
 
 $ ./a.out
 $ gtkwave iiitb_pipo.vcd
-NETLIST
+#### NETLIST
 In electronic design, a netlist is a description of the connectivity of an electronic circuit.In its simplest form, a netlist consists of a list of the electronic components in a circuit and a list of the nodes they are connected to. A network (net) is a collection of two or more interconnected components.
 
 ![netlist](https://user-images.githubusercontent.com/110079807/185232556-0a08a701-6f81-4ec4-a659-ecb38c7289d9.png)
 The above picture shows the netlist of this project after synthesis.
-Post synthesis simulation
+
+#### Post synthesis simulation
+
 ![post synthesis](https://user-images.githubusercontent.com/110079807/185232688-cc14aa7e-c6d9-453a-ba5e-ed6946daa4fd.png)
+
 # Tools Used
 
 ### Layout
