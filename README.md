@@ -568,10 +568,10 @@ Routing View<br>
 
 <br>
 
-Area report by magic :<br>
+### Area Report by MAGIC :<br>
 <br>
+![Screenshot from 2023-02-22 21-02-37](https://user-images.githubusercontent.com/110079807/220673111-90357f49-a82a-4ecc-b3bd-291b17cfabfd.png)
 
-![Screenshot from 2023-02-18 20-33-13](https://user-images.githubusercontent.com/110079807/219874103-79b95013-e15e-42e1-8f49-355985135880.png)
 ![Screenshot from 2023-02-18 20-58-04](https://user-images.githubusercontent.com/110079807/219874141-897323a7-2dd6-40b0-848d-e02c84d589aa.png)
 
 <br>
