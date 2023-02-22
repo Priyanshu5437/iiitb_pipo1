@@ -56,16 +56,7 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
 
 
 
-[Errors and Solutions](https://github.com/Priyanshu5437/iiitb_pipo#errors-and-solutions)<br>
- * [Error 1 : make mount permission denied](https://github.com/Priyanshu5437/iiitb_pipo#error-1)<br>
- * [Error 2 : placement failed error](https://github.com/Priyanshu5437/iiitb_pipo#error-2)<br>
- * [Error 3 : Files name mismatch error](https://github.com/Priyanshu5437/iiitb_pipo#error-3)<br>
- * [Error 4 : No Macro Error](https://github.com/Priyanshu5437/iiitb_pipo#error-4)<br>
- * [Error 5 : sky130_vsdinv not reflecting in stat](https://github.com/Priyanshu5437/iiitb_pipo#error-5)<br>
- * [Error 6: List index out of range](https://github.com/Priyanshu5437/iiitb_pipo#error-6)<br>
- * [Error 7: Can't read sky130_vsdinv error in tcl window](https://github.com/Priyanshu5437/iiitb_pipo#error-7)<br>
- * [Error 8: PL_TARGET DENSITY error](https://github.com/Priyanshu5437/iiitb_pipo#error-8)<br>
- 
+
 
 
  
@@ -772,10 +763,11 @@ we can open the mag file and view the layout after the whole process by the foll
 <b><I> Gate Count =12 </b></I> <br>
 
 ### 2. Area (box command)
-![Screenshot from 2023-02-19 01-47-58](https://user-images.githubusercontent.com/110079807/219962039-35e08cbc-c6ac-41c1-b27c-914d007cd776.png)
+
+![Screenshot from 2023-02-22 15-09-22](https://user-images.githubusercontent.com/110079807/220583107-4c1a5b30-62fa-4dff-8072-1473e1e56744.png)
 
 
-<b><I> Area = 0.0 um2</b></I> <br>
+<b><I> Area = 1769.030 um2</b></I> <br>
 
 
 
@@ -801,53 +793,7 @@ we can open the mag file and view the layout after the whole process by the foll
 
 
 
-# Errors and Solutions
-## Error 1
 
-If the below error occurs while doing `make mount` replace it with `sudo make mount`<br>
-<br>
-
-![Screenshot from 2023-02-19 00-12-15](https://user-images.githubusercontent.com/110079807/219882877-07c3d431-81d8-43ce-9777-a80c49a46dec.png)
-
-
-## Error 2
-
-If you face the below error play around with the values of `PL_TARGET_DENSITY`, `FP_CORE_UTIL` and `CLOCK_PERIOD` until it works for your design, these values are very custom for each and every design. <br>
-<br>
-![Screenshot from 2023-02-19 00-17-26](https://user-images.githubusercontent.com/110079807/219883094-2ae1efe0-d284-4883-8dec-20a18c49a793.png)
-![Screenshot from 2023-02-19 00-17-44](https://user-images.githubusercontent.com/110079807/219883099-fe7441de-90d4-47be-84a1-6a62131c1e3b.png)
-
-
-## Error 3
-
-Make sure the name of the module is same throughout, otherwise it will not infer the macro.<br>
-<br>
-
-
-
-## Error 4
-
-
-If the sky130_vsdinv files are not getting reflected in stat even when the merging was successful and the cell is seen in the merged.nom.lef file. Please use the libraries uploaded in this github page to get the sky130_vsdinv to reflecct in your stat.<br>
-
-`"SYNTH_DRIVING_CELL":"sky130_vsdinv"` please add this to the config.json file while including these libraries. <br>
-
-## Error 5
-
-If you are getting the below error, please check the file name and macro name of `sky130_vsdinv` shoud be same as the once mentioned in  `sky130_fd_sc_hd__fast.lib`, `sky130_fd_sc_hd__slow.lib`, `sky130_fd_sc_hd__typical.lib`<br>
-<br>
-
-![WhatsApp Image 2022-08-30 at 4 16 12 PM](https://user-images.githubusercontent.com/62461290/187418027-9c620ff6-c86f-4695-8e65-20ac84898742.jpeg)
-
-## Error 6
-
-If you are getting the below error, please use merged.nom.lef file while opening def files using magic. <br>
-
-```
-$ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_pipo.def &
-```
-
-![error7](https://user-images.githubusercontent.com/62461290/187417649-cbafa63e-a68b-4497-9f59-eee3e6963b2c.png)
 
 
 
