@@ -1,50 +1,6 @@
 # iiitb_pipo- Parallel in parallel out shift register
 parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits.
 
-# Table of Contents
-
-Description<br>
-Block diagram<br>
-working theory<br>
-Rtl simulation<br>
-[Tools Used]
-* [Icarus Verilog (iverilog) GTKWave installation](https://github.com/Priyanshu5437/iiitb_pipo#icarus-verilog-iverilog-gtkwave-installation)<br>
-* [Yosys installation](https://github.com/Priyanshu5437/iiitb_pipo#yosys-installation)<br>
-* [Python installation](https://github.com/Priyanshu5437/iiitb_pipo#python-installation)<br>
-* [Docker installation](https://github.com/Priyanshu5437/iiitb_pipo#docker-installation)<br>
-* [Openlane installation](https://github.com/Priyanshu5437/iiitb_pipo#openlane-installation)<br>
-* [Magic installation](https://github.com/Priyanshu5437/iiitb_pipo#magic-installation)<br>
-*  [klayout installation](https://github.com/Priyanshu5437/iiitb_pipo#klayout-installation)<br>
-* [ngspice installation](https://github.com/Priyanshu5437/iiitb_pipo#ngspice-installation)<br>
-[PreSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#presynthesis)<br>
- <br>
-[PostSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#postsynthesis)<br>
- <br>
-[Layout](https://github.com/Priyanshu5437/iiitb_pipo#layout)<br>
- * [Preparation](https://github.com/Priyanshu5437/iiitb_pipo#preparation)<br>
- * [Synthesis](https://github.com/Priyanshu5437/iiitb_pipo#synthesis)<br>
-     - [Synthesis Reports](https://github.com/Priyanshu5437/iiitb_pipo#synthesis-reports)<br>
- * [Floorplan](https://github.com/Priyanshu5437/iiitb_pipo#floorplan)<br>
-     - [Floorplan Reports](https://github.com/Priyanshu5437/iiitb_pipo#floorplan-reports)<br>
- * [Placement](https://github.com/Priyanshu5437/iiitb_pipo#placement)<br>
-     - [placement Reports](https://github.com/Priyanshu5437/iiitb_pipo#placement-reports)<br>
- * [Clock Tree Synthesis](https://github.com/Priyanshu5437/iiitb_pipo#clock-tree-synthesis)<br>
- * [Routing](https://github.com/Priyanshu5437/iiitb_pipo#routing)<br>
-     - [Routing Reports](https://github.com/Priyanshu5437/iiitb_pipo#routing-reports)<br>
- [Note](https://github.com/Priyanshu5437/iiitb_pipo#note)<br>
- 
- [Results Post Layout](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#results-post-layout) <br>
-* [1. Post layout synthesis gate count](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#1-post-layout-synthesis-gate-count)<br>
-* [2. Area (box command)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#2-area-box-command)<br>
-
-* [3. Flop/Standard cell ratio](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#4-flopstandard-cell-ratio)<br>
-* [4. Power (internal,switching,leakage and total)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#5-power-internal-switching-leakage-and-total)<br>
-
- [References](https://github.com/Priyanshu5437/iiitb_pipo#reference)<br>
- [Author](https://github.com/Priyanshu5437/iiitb_pipo#author)<br>
- [Contributors](https://github.com/Priyanshu5437/iiitb_pipo#contributors)<br>
- [Acknowledgement](https://github.com/Priyanshu5437/iiitb_pipo#acknowledgement)<br>
- <br>
 
 Descripton
 Shift registers are some sort of sequential logic circuitries that are majorly deployed to store data in digital format and mainly for storage of digital data and in the digital circuit to hold temporary data [3]. They are a group of flip-flops connected in a chain so that the output from one flip-flop becomes the input of the next flip-flop. Most of the registers possess no characteristic internal sequence of states. All flip-flop is driven by a common clock, and all are reset simultaneously. There are basically five types of shift registers are present, such as Serial In - Serial Out (SISO), Serial In - Parallel Out(SIPO), Parallel In – Serial Out(PISO), Parallel In - Parallel Out(PIPO), and bidirectional shift registers. 
