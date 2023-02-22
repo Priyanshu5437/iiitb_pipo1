@@ -4,7 +4,7 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
 # Table of Contents
 
 *[Description](https://github.com/Priyanshu5437/iiitb_pipo#description)<br>
-*[Block diagram](https://github.com/Priyanshu5437/iiitb_pipo#Block diagram)<br>
+*[Block diagram](https://github.com/Priyanshu5437/iiitb_pipo#block diagram)<br>
 *[working theory](https://github.com/Priyanshu5437/iiitb_pipo#)<br>
 *[Rtl simulation](https://github.com/Priyanshu5437/iiitb_pipo#)<br>
 [Tools Used](https://github.com/Priyanshu5437/iiitb_pipo#tools-used)<br>
