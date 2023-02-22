@@ -557,7 +557,8 @@ Navigate to results->routing and type the Magic command in terminal to open the 
 ```
 $ magic -T /home/priyanshu/OpenLane/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_pipo.def &
 ```
-![Screenshot from 2023-02-18 20-27-42](https://user-images.githubusercontent.com/110079807/219873997-54b3fe85-e061-4cde-a0ce-10e037661381.png)
+![Screenshot from 2023-02-22 21-15-53](https://user-images.githubusercontent.com/110079807/220677063-c0f5268f-db3c-44e3-84a3-ea4fa0ffcb04.png)
+
 
 Routing View<br>
 <br>
@@ -569,10 +570,8 @@ Routing View<br>
 <br>
 
 ### Area Report by MAGIC :<br>
-<br>
-![Screenshot from 2023-02-22 21-02-37](https://user-images.githubusercontent.com/110079807/220673111-90357f49-a82a-4ecc-b3bd-291b17cfabfd.png)
 
-![Screenshot from 2023-02-18 20-58-04](https://user-images.githubusercontent.com/110079807/219874141-897323a7-2dd6-40b0-848d-e02c84d589aa.png)
+![Screenshot from 2023-02-22 21-02-37](https://user-images.githubusercontent.com/110079807/220673111-90357f49-a82a-4ecc-b3bd-291b17cfabfd.png)
 
 <br>
 
