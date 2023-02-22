@@ -473,39 +473,6 @@ Now you can plot the graphs for the designed inverter model.
 ![Screenshot from 2022-09-18 22-36-24](https://user-images.githubusercontent.com/110079807/219848079-dd4fcf82-fef1-4cc2-9611-7bafde35bac6.png)
 
 
-Four timing parameters are used to characterize the inverter standard cell:<br>
-
-1. Rise time: Time taken for the output to rise from 20% of max value to 80% of max value<br>
-        `Rise time = (2.23843 - 2.17935) = 59.08ps`
-2. Fall time- Time taken for the output to fall from 80% of max value to 20% of max value<br>
-        `Fall time = (4.09291 - 4.05004) = 42.87ps`
-3. Cell rise delay = time(50% output rise) - time(50% input fall)<br>
-        `Cell rise delay = (2.20636 - 2.15) = 56.36ps`  
-4. Cell fall delay  = time(50% output fall) - time(50% input rise)<br>
-        `Cell fall delay = (4.07479 - 4.05) = 24.79ps`
-        
-To get a grid and to ensure the ports are placed correctly we can use
-```
-% grid 0.46um 0.34um 0.23um 0.17um
-```
-![Screenshot from 2022-09-17 09-39-14](https://user-images.githubusercontent.com/110079807/219848181-a52c8850-3eb5-4be7-89b7-8adc2353195d.png)
-
-
-
-To save the file with a different name, use the folllowing command in tcl window
-```
-% save sky130_vsdinv.mag
-```
-
-Now open the sky130_vsdinv.mag using the magic command in terminal
-```
-$ magic -T sky130A.tech sky130_vsdinv.mag
-```
-In the tcl command type the following command to generate sky130_vsdinv.lef
-```
-$ lef write
-```
-A sky130_vsdinv.lef file will be created.
 
 
 # Layout
