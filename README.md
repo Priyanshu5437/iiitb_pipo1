@@ -292,7 +292,7 @@ run
 
 Open the terminal in the directory where ngspice is stored and type the following command, ngspice console will open:
 
-
+```
 $ ngspice sky130_inv.spice 
 ```
 
