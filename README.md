@@ -3,35 +3,23 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
 
 # Table of Contents
 
-[Description]<br>
-[Block diagram]<br>
-[working theory]<br>
-[Rtl simulation]<br>
-[Tools Used](https://github.com/Priyanshu5437/iiitb_pipo#tools-used)<br>
+Description<br>
+Block diagram<br>
+working theory<br>
+Rtl simulation<br>
+[Tools Used]
 * [Icarus Verilog (iverilog) GTKWave installation](https://github.com/Priyanshu5437/iiitb_pipo#icarus-verilog-iverilog-gtkwave-installation)<br>
 * [Yosys installation](https://github.com/Priyanshu5437/iiitb_pipo#yosys-installation)<br>
 * [Python installation](https://github.com/Priyanshu5437/iiitb_pipo#python-installation)<br>
 * [Docker installation](https://github.com/Priyanshu5437/iiitb_pipo#docker-installation)<br>
 * [Openlane installation](https://github.com/Priyanshu5437/iiitb_pipo#openlane-installation)<br>
 * [Magic installation](https://github.com/Priyanshu5437/iiitb_pipo#magic-installation)<br>
-    - [installing csh](https://github.com/Priyanshu5437/iiitb_pipo#installing-csh)<br>
-    - [installing x11/xorg](https://github.com/Priyanshu5437/iiitb_pipo#installing-x11xorg)<br>
-    - [installing GCC](https://github.com/Priyanshu5437/iiitb_pipo#installing-gcc)<br>
-    - [installing Build Essentials](https://github.com/Priyanshu5437/iiitb_pipo#installing-build-essential)<br>
-    - [installing OpenGL](https://github.com/Priyanshu5437/iiitb_pipo#installing-opengl)<br>
-    - [installing tcl/tk](https://github.com/Priyanshu5437/iiitb_pipo#installing-tcltk)
-    - [installing magic](https://github.com/Priyanshu5437/iiitb_pipo#installing-magic)<br>
- * [klayout installation](https://github.com/Priyanshu5437/iiitb_pipo#klayout-installation)<br>
- * [ngspice installation](https://github.com/Priyanshu5437/iiitb_pipo#ngspice-installation)<br>
-
-
+*  [klayout installation](https://github.com/Priyanshu5437/iiitb_pipo#klayout-installation)<br>
+* [ngspice installation](https://github.com/Priyanshu5437/iiitb_pipo#ngspice-installation)<br>
 [PreSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#presynthesis)<br>
  <br>
 [PostSynthesis](https://github.com/Priyanshu5437/iiitb_pipo#postsynthesis)<br>
  <br>
- 
-
- 
 [Layout](https://github.com/Priyanshu5437/iiitb_pipo#layout)<br>
  * [Preparation](https://github.com/Priyanshu5437/iiitb_pipo#preparation)<br>
  * [Synthesis](https://github.com/Priyanshu5437/iiitb_pipo#synthesis)<br>
@@ -43,25 +31,15 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
  * [Clock Tree Synthesis](https://github.com/Priyanshu5437/iiitb_pipo#clock-tree-synthesis)<br>
  * [Routing](https://github.com/Priyanshu5437/iiitb_pipo#routing)<br>
      - [Routing Reports](https://github.com/Priyanshu5437/iiitb_pipo#routing-reports)<br>
-
-
  [Note](https://github.com/Priyanshu5437/iiitb_pipo#note)<br>
- <br>
-
-[Results Post Layout](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#results-post-layout) <br>
+ 
+ [Results Post Layout](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#results-post-layout) <br>
 * [1. Post layout synthesis gate count](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#1-post-layout-synthesis-gate-count)<br>
 * [2. Area (box command)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#2-area-box-command)<br>
 
 * [3. Flop/Standard cell ratio](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#4-flopstandard-cell-ratio)<br>
 * [4. Power (internal,switching,leakage and total)](https://github.com/Priyanshu5437/iiitb_pipo/blob/main/README.md#5-power-internal-switching-leakage-and-total)<br>
 
-
-
-
-
-
-
- 
  [References](https://github.com/Priyanshu5437/iiitb_pipo#reference)<br>
  [Author](https://github.com/Priyanshu5437/iiitb_pipo#author)<br>
  [Contributors](https://github.com/Priyanshu5437/iiitb_pipo#contributors)<br>
@@ -69,20 +47,14 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
  <br>
 
 Descripton
-
 Shift registers are some sort of sequential logic circuitries that are majorly deployed to store data in digital format and mainly for storage of digital data and in the digital circuit to hold temporary data [3]. They are a group of flip-flops connected in a chain so that the output from one flip-flop becomes the input of the next flip-flop. Most of the registers possess no characteristic internal sequence of states. All flip-flop is driven by a common clock, and all are reset simultaneously. There are basically five types of shift registers are present, such as Serial In - Serial Out (SISO), Serial In - Parallel Out(SIPO), Parallel In – Serial Out(PISO), Parallel In - Parallel Out(PIPO), and bidirectional shift registers. 
-
 Register  
 • A set of n flip-flops. 
 • Each flip-flop stores one bit. 
 • Two basic functions: data storage and data movement.
 
 For parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits. The following circuit is a four-bit parallel in - parallel out shift register constructed by D flip-flops.  Fig. 1: Parallel in Parallel Out Design the D's are the parallel inputs and the Q's are the parallel outputs and “clear” is to reset the output of each flip-flop to the 0 logic level. Once the register is clocked, all the data at the D inputs appear at the corresponding Q outputs simultaneously.
-
 BLOCK DIAGRAM
-
-
-
 
 ![Shift_reg5](https://user-images.githubusercontent.com/110079807/184118006-eb8baad2-4757-467d-aac2-61650bacb218.png)
 
@@ -97,14 +69,10 @@ RTL SIMULATION
  
 Tools which is used
  
- IVERILOG
-
-Icarus Verilog is a Verilog simulation and synthesis tool.
-To install iverilog, type the following command in the terminal:
-
+IVERILOG
+Icarus Verilog is installed by using following command:
 $ sudo apt install iverilog 
 GTKWAVE
-
 GTKWave is a VCD waveform viewer based on the GTK library. This viewer support VCD and LXT formats for signal dumps.
 
 $ sudo apt install gtkwave 
@@ -165,14 +133,10 @@ NETLIST
 In electronic design, a netlist is a description of the connectivity of an electronic circuit.In its simplest form, a netlist consists of a list of the electronic components in a circuit and a list of the nodes they are connected to. A network (net) is a collection of two or more interconnected components.
 
 ![netlist](https://user-images.githubusercontent.com/110079807/185232556-0a08a701-6f81-4ec4-a659-ecb38c7289d9.png)
-
 The above picture shows the netlist of this project after synthesis.
 Post synthesis simulation
-
 ![post synthesis](https://user-images.githubusercontent.com/110079807/185232688-cc14aa7e-c6d9-453a-ba5e-ed6946daa4fd.png)
-
- 
- # Tools Used
+# Tools Used
 
 ## Icarus Verilog (iverilog) GTKWave installation
 
@@ -182,12 +146,8 @@ $ sudo apt-get update
 $ sudo apt-get install iverilog gtkwave 
 ```
 
-
 ## Yosys installation
 
-Open the terminal by right clicking on am empty space in the directory u want to install and type the following commands:
-
-```
 $ git clone https://github.com/YosysHQ/yosys.git
 
 $ cd yosys-master
@@ -393,9 +353,6 @@ $ gtkwave iiitb_pipo_vcd.vcd
 ![netlist](https://user-images.githubusercontent.com/110079807/219847534-8798aa21-f330-4c64-ab48-b99122ad34eb.png)
 
 
-
-
-
 The spice netlist has to be edited to add the libraries we are using, The final spice netlist should look like the following:
 
 ```
@@ -476,38 +433,37 @@ The contents of the config.json are as follows. this can be modified specificall
 
 
 ```
-{
+{ 
     "DESIGN_NAME": "iiitb_pipo",
-    "VERILOG_FILES": "dir::src/iiitb_pipo.v",
-    "CLOCK_PORT": "clkin",
-    "CLOCK_NET": "clkin",
-    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
-    "CLOCK_PERIOD": 10,
-    "PL_TARGET_DENSITY": 0.7,
-    "FP_SIZING" : "relative",
-    "pdk::sky130*": {
-        "FP_CORE_UTIL": 30,
-        "scl::sky130_fd_sc_hd": {
-            "FP_CORE_UTIL": 20
-        }
-    },
-    
-    "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
-    "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
-    "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
-    "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
-    "TEST_EXTERNAL_GLOB": "dir::../iiitb_pipo/src/*"
+        "VERILOG_FILES": "dir::src/iiitb_pipo.v",
+        "CLOCK_PORT": "clkin",
+        "CLOCK_NET": "clkin",
+        "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
+        "CLOCK_PERIOD": 10,
+        "PL_TARGET_DENSITY": 0.7,
+        "FP_SIZING" : "relative",
+        "FP_PDN_VPITCH" : 7.6, 
+        "FP_PDN_HPITCH" : 7.6,
 
-
+        "pdk::sky130*": {
+            "FP_CORE_UTIL": 30,
+            "scl::sky130_fd_sc_hd": {
+                "FP_CORE_UTIL": 20
+            }
+        },
+        
+        "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
+        "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
+        "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
+        "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
+        "TEST_EXTERNAL_GLOB": "dir::../iiitb_pipo/src/*"
 }
 ```
 
-
-
-Save all the changes made above and Navigate to the openlane folder in terminal and give the following command :<br>
+Saving changes done and Navigate to the openlane folder in terminal and give  command :<br>
 
 ```
-$ make mount (if this command doesnot go through prefix it with sudo)
+$ sudo make mount
 ```
 ![Screenshot from 2022-09-19 16-11-30](https://user-images.githubusercontent.com/110079807/219849003-c9b3476f-f770-498c-b850-ee796714d600.png)
 
@@ -517,7 +473,7 @@ $ ./flow.tcl -interactive
 ```
 ![Screenshot from 2022-09-19 16-11-50](https://user-images.githubusercontent.com/110079807/219849034-85067d3f-ba1f-4332-9dc7-6eaf97bbcaa1.png)
 
-This command will take you into the tcl console. In the tcl console type the following commands:<br>
+In tcl console we need to enter command
 
 ```
 % package require openlane 0.9
