@@ -655,7 +655,7 @@ we can open the mag file and view the layout after the whole process by the foll
 - Priyanshu
 
 ### Contributors
--Priyanshu </br>
+- Priyanshu </br>
 - Dantu Nandini Devi </br>
 - Kunal Ghosh </br>
 
