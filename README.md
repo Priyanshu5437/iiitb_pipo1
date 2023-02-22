@@ -4,9 +4,9 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
 # Table of Contents
 
 *[Description](https://github.com/Priyanshu5437/iiitb_pipo#description)<br>
-*[Block diagram]
-*[working theory]
-*[Rtl simulation]
+*[Block diagram]<br>
+*[working theory]<br>
+*[Rtl simulation]<br>
 [Tools Used](https://github.com/Priyanshu5437/iiitb_pipo#tools-used)<br>
 * [Icarus Verilog (iverilog) GTKWave installation](https://github.com/Priyanshu5437/iiitb_pipo#icarus-verilog-iverilog-gtkwave-installation)<br>
 * [Yosys installation](https://github.com/Priyanshu5437/iiitb_pipo#yosys-installation)<br>
