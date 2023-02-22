@@ -4,7 +4,7 @@ parallel in - parallel out shift registers, all data bits appear on the parallel
 # Table of Contents
 
 [Description](https://github.com/Priyanshu5437/iiitb_pipo#description)<br>
-<br>
+
 [Tools Used](https://github.com/Priyanshu5437/iiitb_pipo#tools-used)<br>
 * [Icarus Verilog (iverilog) GTKWave installation](https://github.com/Priyanshu5437/iiitb_pipo#icarus-verilog-iverilog-gtkwave-installation)<br>
 * [Yosys installation](https://github.com/Priyanshu5437/iiitb_pipo#yosys-installation)<br>
@@ -93,7 +93,7 @@ RTL SIMULATION
 
  ![pre_synthesis](https://user-images.githubusercontent.com/110079807/185230950-fca19ccb-abf3-4144-b743-e57fac3ad7fc.png)
  
- TOOLS USED
+ Tools which is used
  
  IVERILOG
 
@@ -185,7 +185,6 @@ $ sudo apt-get update
 $ sudo apt-get install iverilog gtkwave 
 ```
 
-This can be installed on windows as well by directly downloading and installing the .exe file of icarus
 
 ## Yosys installation
 
@@ -396,36 +395,8 @@ $ gtkwave iiitb_pipo_vcd.vcd
 ![post synthesis](https://user-images.githubusercontent.com/110079807/219847504-e17c2cf9-d570-491e-845e-4b423f93439e.png)
 ![netlist](https://user-images.githubusercontent.com/110079807/219847534-8798aa21-f330-4c64-ab48-b99122ad34eb.png)
 
-# Creating a Custom Inverter Cell
 
-Open Terminal in the folder you want to create the custom inverter cell.
 
-```
-$ git clone https://github.com/nickson-jose/vsdstdcelldesign.git
-
-$ cd vsdstdcelldesign
-
-$  cp ./libs/sky130A.tech sky130A.tech
-
-$ magic -T sky130A.tech sky130_inv.mag &
-```
-
-![1](https://user-images.githubusercontent.com/62461290/187424346-c798a1a0-3e8b-43c8-a14a-7fc75e51ef2a.png)<br>
-
-The above layout will open. The design can be verified and various layers can be seen and examined by selecting the area of examination and type `what` in the tcl window.
-
-To extract Spice netlist, Type the following commands in tcl window.
-
-```
-% extract all
-
-% ext2spice cthresh 0 rthresh 0
-
-% ext2spice
-```
-`cthresh 0 rthresh 0` is used to extract parasitic capacitances from the cell.<br>
-
-![Screenshot from 2023-02-19 00-01-09](https://user-images.githubusercontent.com/110079807/219882485-38930437-80dd-461c-a114-26a0061f26a3.png)
 
 
 The spice netlist has to be edited to add the libraries we are using, The final spice netlist should look like the following:
