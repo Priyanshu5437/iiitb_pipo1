@@ -547,7 +547,6 @@ we can open the mag file and view the layout after the whole process by the foll
 
 
 
-![Screenshot from 2023-02-18 21-19-15](https://user-images.githubusercontent.com/110079807/219877445-3bb38688-8740-45bc-8e4a-4ae563f3056a.png)
 ![Screenshot from 2023-02-18 21-19-30](https://user-images.githubusercontent.com/110079807/219877448-cf19bc45-30f4-4c23-b3ce-44ea3c58d2de.png)
 
 
