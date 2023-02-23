@@ -2,7 +2,7 @@
 parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits.
 
 ### Descripton
-Shift registers are a type of sequential logic circuitry that are primarily used for digital data storage and temporary data holding in digital circuits. They are made up of a series of interconnected flip-flops, with each flip-flop's output becoming the input of the next. Most shift registers do not have any inherent internal sequence of states, and are driven by a common clock and reset simultaneously. There are five main types of shift registers: Serial In - Serial Out (SISO), Serial In - Parallel Out (SIPO), Parallel In - Serial Out (PISO), Parallel In - Parallel Out (PIPO), and bidirectional shift registers. Each shift register consists of a set of n flip-flops, where each flip-flop can store one bit of data. These registers perform two fundamental functions: data storage and data movement.
+Shift registers are a type of sequential logic circuitry that are primarily used for digital data storage and temporary data holding in digital circuits. They are made up of a series of interconnected flip-flops, with each flip-flop's output becoming the input of the next. Most shift registers do not have any inherent internal sequence of states, and are driven by a common clock and reset simultaneously. There are five main types of shift registers: Serial In - Serial Out (SISO), Serial In - Parallel Out (SIPO), Parallel In - Serial Out (PISO), Parallel In - Parallel Out (PIPO), and bidirectional shift registers. 
 
 Register  
 • A set of n flip-flops. 
